@@ -1,5 +1,4 @@
 import random
-
 class ppt:
     usuario = None
     pc = None
