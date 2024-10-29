@@ -11,7 +11,7 @@ class ppt:
         elif self.usuario == 'papel' and self.pc == 'pedra' or self.usuario == 'tesoura' and self.pc == 'papel' or self.usuario == 'pedra' and self.pc == 'tesoura':
             self.pontuacao += 1
             return 'Você venceu, parabéns!!!'
-        else:
+        elif self.usuario == 'pedra' and self.pc == 'papel' or self.usuario == 'papel' and self.pc == 'tesoura' or self.usuario == 'tesoura' and self.pc == 'pedra':
             self.pontuacao_pc += 1
             return 'Você perdeu :('
 def main():
@@ -23,8 +23,11 @@ def main():
         if result.usuario == 'x':
             print('Encerrando o jogo...')
             break
-        else:
+        if result.usuario == 'tesoura' or result.usuario == 'papel' or result.usuario == 'pedra':
             print(result.jogo())
+        else:
+            print('Tente novamente...')
+            return main()
         print('O pc escolheu:', result.pc)
     print('Seus pontos', result.pontuacao)
     print('Pontos do pc', result.pontuacao_pc)
