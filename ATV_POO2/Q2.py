@@ -20,7 +20,7 @@ class bicicleta:
                 return 'Valor errado ou passou dos limites.'
             elif self.altura_cela == 77 and self.calibragem_pneus == 77:
                 return 'Você não alterou nada'
-        elif 100 > self.velocidade_atual > 0:
+        if 100 > self.velocidade_atual > 0:
             self.velocidade_atual = int(input('Altere a velocidade atual(Enquanto estiver em movimeno não poderá alterar a altura da cela nem a calibragem dos pneus.)'))
             self.regular()
         else:

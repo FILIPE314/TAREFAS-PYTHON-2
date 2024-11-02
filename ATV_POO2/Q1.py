@@ -5,7 +5,7 @@ class relogio_digital_simples:
         self.hora = hr
         self.minuto = min
     def result(self):
-        if self.hora < 25 and self.minuto < 60:
+        if self.hora < 24 and self.minuto < 60:
             return f'{self.hora}' + ':' + f'{self.minuto}'
         else:
             return 'valor inválido'
