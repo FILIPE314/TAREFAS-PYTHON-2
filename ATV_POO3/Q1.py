@@ -1,6 +1,13 @@
-class cadastro_de_veiculo:
+class cadastro_de_veiculos:
+    placa = None
+    marca = None
+    modelo = None
+    ano = 0
+    cor = None
+    proprietario = None
+    quiometragem = None
 
-    def __init__(self, p, m, mod, a, c = 'Não especificado', pro = 'Não especificado', km = 'Não especificado'):
+    def __init__(self, p, m, mod, a, c="Não especificada", pro="Não especificada", km="Não especificada"):
         self.placa = p
         self.marca = m
         self.modelo = mod
@@ -10,34 +17,32 @@ class cadastro_de_veiculo:
         self.quilometragem = km
 
     def __str__(self):
-        if self.placa == '':
-            self.placa ='Não especificado'
-        if self.marca == '':
-            self.marca ='Não especificado'
-        if self.modelo == '':
-            self.modelo ='Não especificado'
-        if self.ano == '':
-            self.ano ='Não especificado'
-        if self.cor == '':
-            self.cor ='Não especificado'
-        if self.proprietario == '':
-            self.proprietario ='Não especificado'
-        if self.quilometragem == '':
-            self.quilometragem ='Não especificado'
-        r1 = f'A placa do carro: {self.placa}'
-        r2 = f'\nA marca do carro: {self.marca}'
-        r3 = f'\nO modelo do carro: {self.modelo}'
-        r4 = f'\nO ano do carro: {self.ano}'
-        r5 = f'\nA cor do carro: {self.cor}'
-        r6 = f'\nO proprietario do carro: {self.proprietario}'
-        r7 = f'\nA quilometragem do carro: {self.quilometragem}'
-        return r1 + r2 + r3 + r4 + r5 + r6 + r7
-
+        p = f'Placa do carro: {self.placa}'
+        mar = f'Marca do carro: {self.marca}'
+        mod = f'Modelo do carro: {self.modelo}'
+        ano = f'Ano do carro: {self.ano}'
+        c = f'Cor do carro: {self.cor}'
+        pro = f'Proprietário do carro {self.proprietario}'
+        km = f'Quilômetros rodados {self.quilometragem}'
+        return p + mar + mod + ano + c + pro + km
 def main():
     print('Cadastre seu veículo')
     while True:
-        result = cadastro_de_veiculo(p = input('Digite a placa do carro: '), m = input('Digite a marca do carro: '), mod = input('Digite o modelo do carro: '), a = int(input('Digite o ano do carro: ')), c = input('Digite a cor do carro: '), pro = input('Digite o proprietario do carro: '), km = int(input('Digite a quilometragem do carro: ')),)
-        print(result)
-        break
-if __name__ == '__main__':
+        cadas = cadastro_de_veiculos(p = input('Digite a placa:'), m = input('Digite a marca: '), mod = input('Digite o modelo: '), a = input('Digite oano:'),     c = input('Digite a cor: '))
+        if cadastro_de_veiculos.cor == 'Não especificada':
+            return cadastro_de_veiculos.cor
+        else:
+            print(cadastro_de_veiculos.cor)
+        cadastro_de_veiculos.pro = input('Digite o proprietário: ')
+        if cadastro_de_veiculos.proprietario == 'Não especificada':
+            return cadastro_de_veiculos.proprietario
+        else:
+            print(cadastro_de_veiculos.proprietario)
+        cadastro_de_veiculos.km = input('Digite a quilometragem: ')
+        if cadastro_de_veiculos.quiometragem == 'Não especificada':
+            return cadastro_de_veiculos.quiometragem
+        else:
+            print(cadastro_de_veiculos.quiometragem)
+        print(cadas)
+if __name__ == '__main__' :
     main()
