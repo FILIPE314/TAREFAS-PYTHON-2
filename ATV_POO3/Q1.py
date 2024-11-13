@@ -17,12 +17,12 @@ class cadastro_de_veiculos:
         self.quilometragem = km
 
     def __str__(self):
-        p = f'Placa do carro: {self.placa}\n'
-        mar = f'Marca do carro: {self.marca}\n'
-        mod = f'Modelo do carro: {self.modelo}\n'
-        ano = f'Ano do carro: {self.ano}\n'
-        c = f'Cor do carro: {self.cor}\n'
-        pro = f'Proprietário do carro {self.proprietario}\n'
+        p = f'Placa do carro: {self.placa}'
+        mar = f'Marca do carro: {self.marca}'
+        mod = f'Modelo do carro: {self.modelo}'
+        ano = f'Ano do carro: {self.ano}'
+        c = f'Cor do carro: {self.cor}'
+        pro = f'Proprietário do carro {self.proprietario}'
         km = f'Quilômetros rodados {self.quilometragem}'
         return p + mar + mod + ano + c + pro + km
 def main():
