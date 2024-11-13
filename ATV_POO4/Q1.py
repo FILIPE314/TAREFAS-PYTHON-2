@@ -48,7 +48,7 @@ def main():
      2  Mudar categoria
      3  Acrescentar observações
      4  Editar o local
-     5  Terminar
+     5  Encerrar
         --'''))
         if opcao == 1:
             minha_cnh.nome = input('\nDigite o nome: ')
@@ -59,7 +59,8 @@ def main():
             minha_cnh.observacoes = input('\nDigite as observações: ')
         elif opcao == 4:
             minha_cnh.local = input('\nDigite um novo local: ')
-        elif opcao == 5: break
+        elif opcao == 5: 
+            break
         print(minha_cnh)
 if __name__ == '__main__':
     main()
