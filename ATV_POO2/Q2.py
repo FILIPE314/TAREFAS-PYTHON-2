@@ -25,6 +25,7 @@ class bicicleta:
             self.regular()
         else:
             return 'Valor errado ou passou dos limites.'
+        
 def main():
     while True:
         bike = bicicleta(velocidade = int(input('Altere a velocidade, caso queira continuar parado digite (0).')))

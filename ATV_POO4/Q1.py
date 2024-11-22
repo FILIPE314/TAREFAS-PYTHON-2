@@ -12,6 +12,7 @@ class cnh:
         self.hab_1 = hab_1
         self.obs = obs
         self.local = local
+        
     def mudar1(self, hab_1):
         if self.hab_1 != None:
             return hab_1

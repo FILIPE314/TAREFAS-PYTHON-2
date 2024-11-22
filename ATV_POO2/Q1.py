@@ -9,6 +9,7 @@ class relogio_digital_simples:
             return f'{self.hora}' + ':' + f'{self.minuto}'
         else:
             return 'valor inválido'
+        
 def main():
     print('Oi, quer digitar as horas e minutos de um relógio? Se quiser sair digite (60) no minuto.')
     while True:

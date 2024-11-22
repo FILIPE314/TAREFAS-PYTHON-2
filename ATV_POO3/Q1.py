@@ -25,6 +25,7 @@ class cadastro_de_veiculos:
         pro = f'Proprietário do carro {self.proprietario}'
         km = f'Quilômetros rodados {self.quilometragem}'
         return p + mar + mod + ano + c + pro + km
+    
 def main():
     print('Cadastre seu veículo')
     while True:

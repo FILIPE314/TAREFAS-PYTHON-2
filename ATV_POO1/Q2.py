@@ -14,6 +14,7 @@ class ppt:
         elif self.usuario == 'pedra' and self.pc == 'papel' or self.usuario == 'papel' and self.pc == 'tesoura' or self.usuario == 'tesoura' and self.pc == 'pedra':
             self.pontuacao_pc += 1
             return 'Você perdeu :('
+        
 def main():
     print('Bem vindo ao jogo de pedra, papel e tesoura!')
     result = ppt()

@@ -1,6 +1,7 @@
 #Crie uma classe que defina uma calculadora básica.
 #Defina os atributos básicos e implemente os comportamentos(métodos)
 #class calculadora:
+
 #    sinal = None
 #    num1 = None
 #    num2 = None
